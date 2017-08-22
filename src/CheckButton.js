@@ -51,7 +51,7 @@ class CheckButton extends Component {
                      (e) => this.props.onClick(this.props.index, e) : null
             }
             onMouseOver={(e) => this.setState({hover: true})}
-            onMouseOut={(e) => this.setState({hover: false})}>
+            onMouseOut={(e) => this.setState({hover: true})}>
                 <svg
             fill={this.fill()}
             height="24" viewBox="0 0 24 24"
@@ -111,6 +111,6 @@ CheckButton.propTypes = {index: PropTypes.number,
 CheckButton.defaultProps = {isSelectable: true,
                             isSelected: false,
                             parentHover: false,
-                            hover: false};
+                            hover: true};
 
 module.exports = CheckButton;
