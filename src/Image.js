@@ -7,7 +7,7 @@ class Image extends Component {
         super(props);
 
         this.state = {
-            hover: false
+            hover: true
         };
     }
 
@@ -127,7 +127,7 @@ class Image extends Component {
                 <div className="tile"
             key={"tile-"+this.props.index}
             onMouseEnter={(e) => this.setState({hover: true})}
-            onMouseLeave={(e) => this.setState({hover: false})}
+            onMouseLeave={(e) => this.setState({hover: true})}
             style={{
                 margin: this.props.margin,
                 WebkitUserSelect: "none",
@@ -208,7 +208,7 @@ Image.propTypes = {
 
 Image.defaultProps = {
     isSelectable: true,
-    hover: false
+    hover: true
 };
 
 export default Image;
